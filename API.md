@@ -53,7 +53,7 @@ Gets the status of the server. You can use this to test the API.
 
 ```json
 {
-  "message": "string"
+  "message": "ok"
 }
 ```
 
@@ -107,7 +107,7 @@ Creates an Offer Redemption. "teamId" and "offerCode" are the only required fiel
 {
   "teamId": "39859716-6f25-11e9-ae22-28cfe91fa8f1",
   "offerCode": "SPRING_2019_50_PERCENT_OFF",
-  "redeemedAt": "2019-05-05T11:24:00Z",
+  "redeemedAt": "2019-05-05T11:24:39Z",
   "orderId": "O144232334",
   "currency": "USD",
   "value": "13.33",
@@ -163,7 +163,7 @@ BearerAuth
 
 ```json
 {
-  "message": "string"
+  "message": "ok"
 }
 
 ```
@@ -199,7 +199,7 @@ BearerAuth
 {
   "teamId": "39859716-6f25-11e9-ae22-28cfe91fa8f1",
   "offerCode": "SPRING_2019_50_PERCENT_OFF",
-  "redeemedAt": "2019-05-05T11:24:00Z",
+  "redeemedAt": "2019-05-05T11:24:39Z",
   "orderId": "O144232334",
   "currency": "USD",
   "value": "13.33",

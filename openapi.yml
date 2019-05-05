@@ -17,6 +17,7 @@ components:
       properties:
         message:
           type: string
+          example: "ok"
     OfferRedemption:
       type: object
       properties:
