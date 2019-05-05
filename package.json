@@ -1,0 +1,10 @@
+{
+  "name": "social-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:extractsio/social-api.git",
+  "author": "Jamie McCrindle <jamie@extracts.io>",
+  "dependencies": {
+    "widdershins": "^3.6.7"
+  }
+}
