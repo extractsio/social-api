@@ -2,13 +2,7 @@
 title: Extracts Social API
 language_tabs:
   - shell: Shell
-  - http: HTTP
-  - javascript: JavaScript
-  - javascript--nodejs: Node.JS
-  - ruby: Ruby
   - python: Python
-  - java: Java
-  - go: Go
 toc_footers: []
 includes: []
 search: false
@@ -47,72 +41,6 @@ curl -X GET https://cvqtzfgnk3.execute-api.us-east-1.amazonaws.com/Production/st
 
 ```
 
-```http
-GET https://cvqtzfgnk3.execute-api.us-east-1.amazonaws.com/Production/status HTTP/1.1
-Host: cvqtzfgnk3.execute-api.us-east-1.amazonaws.com
-Accept: application/json
-
-```
-
-```javascript
-var headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-
-};
-
-$.ajax({
-  url: 'https://cvqtzfgnk3.execute-api.us-east-1.amazonaws.com/Production/status',
-  method: 'get',
-
-  headers: headers,
-  success: function(data) {
-    console.log(JSON.stringify(data));
-  }
-})
-
-```
-
-```javascript--nodejs
-const fetch = require('node-fetch');
-
-const headers = {
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-
-};
-
-fetch('https://cvqtzfgnk3.execute-api.us-east-1.amazonaws.com/Production/status',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-headers = {
-  'Accept' => 'application/json',
-  'Authorization' => 'Bearer {access-token}'
-}
-
-result = RestClient.get 'https://cvqtzfgnk3.execute-api.us-east-1.amazonaws.com/Production/status',
-  params: {
-  }, headers: headers
-
-p JSON.parse(result)
-
-```
-
 ```python
 import requests
 headers = {
@@ -125,50 +53,6 @@ r = requests.get('https://cvqtzfgnk3.execute-api.us-east-1.amazonaws.com/Product
 }, headers = headers)
 
 print r.json()
-
-```
-
-```java
-URL obj = new URL("https://cvqtzfgnk3.execute-api.us-east-1.amazonaws.com/Production/status");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("GET");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-
-```
-
-```go
-package main
-
-import (
-       "bytes"
-       "net/http"
-)
-
-func main() {
-
-    headers := map[string][]string{
-        "Accept": []string{"application/json"},
-        "Authorization": []string{"Bearer {access-token}"},
-        
-    }
-
-    data := bytes.NewBuffer([]byte{jsonReq})
-    req, err := http.NewRequest("GET", "https://cvqtzfgnk3.execute-api.us-east-1.amazonaws.com/Production/status", data)
-    req.Header = headers
-
-    client := &http.Client{}
-    resp, err := client.Do(req)
-    // ...
-}
 
 ```
 
@@ -210,86 +94,6 @@ curl -X POST https://cvqtzfgnk3.execute-api.us-east-1.amazonaws.com/Production/o
 
 ```
 
-```http
-POST https://cvqtzfgnk3.execute-api.us-east-1.amazonaws.com/Production/offer-redemptions HTTP/1.1
-Host: cvqtzfgnk3.execute-api.us-east-1.amazonaws.com
-Content-Type: application/json
-Accept: application/json
-
-```
-
-```javascript
-var headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-
-};
-
-$.ajax({
-  url: 'https://cvqtzfgnk3.execute-api.us-east-1.amazonaws.com/Production/offer-redemptions',
-  method: 'post',
-
-  headers: headers,
-  success: function(data) {
-    console.log(JSON.stringify(data));
-  }
-})
-
-```
-
-```javascript--nodejs
-const fetch = require('node-fetch');
-const inputBody = '{
-  "teamId": "39859716-6f25-11e9-ae22-28cfe91fa8f1",
-  "offerCode": "SPRING_2019_50_PERCENT_OFF",
-  "redeemedAt": "2019-05-05T11:14:02Z",
-  "orderId": "O144232334",
-  "currency": "USD",
-  "value": "13.33",
-  "contentIds": [
-    "SKU22242"
-  ]
-}';
-const headers = {
-  'Content-Type':'application/json',
-  'Accept':'application/json',
-  'Authorization':'Bearer {access-token}'
-
-};
-
-fetch('https://cvqtzfgnk3.execute-api.us-east-1.amazonaws.com/Production/offer-redemptions',
-{
-  method: 'POST',
-  body: inputBody,
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-headers = {
-  'Content-Type' => 'application/json',
-  'Accept' => 'application/json',
-  'Authorization' => 'Bearer {access-token}'
-}
-
-result = RestClient.post 'https://cvqtzfgnk3.execute-api.us-east-1.amazonaws.com/Production/offer-redemptions',
-  params: {
-  }, headers: headers
-
-p JSON.parse(result)
-
-```
-
 ```python
 import requests
 headers = {
@@ -306,51 +110,6 @@ print r.json()
 
 ```
 
-```java
-URL obj = new URL("https://cvqtzfgnk3.execute-api.us-east-1.amazonaws.com/Production/offer-redemptions");
-HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-con.setRequestMethod("POST");
-int responseCode = con.getResponseCode();
-BufferedReader in = new BufferedReader(
-    new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
-while ((inputLine = in.readLine()) != null) {
-    response.append(inputLine);
-}
-in.close();
-System.out.println(response.toString());
-
-```
-
-```go
-package main
-
-import (
-       "bytes"
-       "net/http"
-)
-
-func main() {
-
-    headers := map[string][]string{
-        "Content-Type": []string{"application/json"},
-        "Accept": []string{"application/json"},
-        "Authorization": []string{"Bearer {access-token}"},
-        
-    }
-
-    data := bytes.NewBuffer([]byte{jsonReq})
-    req, err := http.NewRequest("POST", "https://cvqtzfgnk3.execute-api.us-east-1.amazonaws.com/Production/offer-redemptions", data)
-    req.Header = headers
-
-    client := &http.Client{}
-    resp, err := client.Do(req)
-    // ...
-}
-
-```
-
 `POST /offer-redemptions`
 
 Creates an Offer Redemption. "teamId" and "offerCode" are the only required fields.
@@ -361,7 +120,7 @@ Creates an Offer Redemption. "teamId" and "offerCode" are the only required fiel
 {
   "teamId": "39859716-6f25-11e9-ae22-28cfe91fa8f1",
   "offerCode": "SPRING_2019_50_PERCENT_OFF",
-  "redeemedAt": "2019-05-05T11:14:02Z",
+  "redeemedAt": "2019-05-05T11:20:49Z",
   "orderId": "O144232334",
   "currency": "USD",
   "value": "13.33",
@@ -453,7 +212,7 @@ BearerAuth
 {
   "teamId": "39859716-6f25-11e9-ae22-28cfe91fa8f1",
   "offerCode": "SPRING_2019_50_PERCENT_OFF",
-  "redeemedAt": "2019-05-05T11:14:02Z",
+  "redeemedAt": "2019-05-05T11:20:49Z",
   "orderId": "O144232334",
   "currency": "USD",
   "value": "13.33",
