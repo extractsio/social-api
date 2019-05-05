@@ -19,15 +19,16 @@ components:
     BearerAuth:
       type: http
       scheme: bearer
-/status:
-  get:
-    description: Gets the status of the server
-    responses:
-      '200':
-        description: A status response
-        content:
-          application/json:
-            schema:
-              type: array
-              items:
-                $ref: '#/components/schemas/Status'
+paths:
+  /status:
+    get:
+      description: Gets the status of the server
+      responses:
+        '200':
+          description: A status response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Status'
