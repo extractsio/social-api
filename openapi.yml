@@ -22,6 +22,7 @@ components:
       properties:
         id:
           type: string
+          example: "3076dbfa-6f28-11e9-8db4-28cfe91fa8f1"
     CreateOfferRedemption:
       type: object
       required: 
