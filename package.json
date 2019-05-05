@@ -6,5 +6,8 @@
   "author": "Jamie McCrindle <jamie@extracts.io>",
   "dependencies": {
     "widdershins": "^3.6.7"
+  },
+  "scripts": {
+    "docs": "widdershins --search false openapi.yml -o API.md"
   }
 }

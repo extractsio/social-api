@@ -243,7 +243,7 @@ const fetch = require('node-fetch');
 const inputBody = '{
   "teamId": "39859716-6f25-11e9-ae22-28cfe91fa8f1",
   "offerCode": "SPRING_2019_50_PERCENT_OFF",
-  "redeemedAt": "2019-05-05T11:11:57Z",
+  "redeemedAt": "2019-05-05T11:14:02Z",
   "orderId": "O144232334",
   "currency": "USD",
   "value": "13.33",
@@ -361,7 +361,7 @@ Creates an Offer Redemption. "teamId" and "offerCode" are the only required fiel
 {
   "teamId": "39859716-6f25-11e9-ae22-28cfe91fa8f1",
   "offerCode": "SPRING_2019_50_PERCENT_OFF",
-  "redeemedAt": "2019-05-05T11:11:57Z",
+  "redeemedAt": "2019-05-05T11:14:02Z",
   "orderId": "O144232334",
   "currency": "USD",
   "value": "13.33",
@@ -453,7 +453,7 @@ BearerAuth
 {
   "teamId": "39859716-6f25-11e9-ae22-28cfe91fa8f1",
   "offerCode": "SPRING_2019_50_PERCENT_OFF",
-  "redeemedAt": "2019-05-05T11:11:57Z",
+  "redeemedAt": "2019-05-05T11:14:02Z",
   "orderId": "O144232334",
   "currency": "USD",
   "value": "13.33",
