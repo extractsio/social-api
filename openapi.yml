@@ -1,11 +1,12 @@
 openapi: 3.0.0
-title: Extracts Social API
-description: The Extracts Social API.
-contact:
-  name: API Support
-  url: http://extracts.io/support
-  email: support@extracts.io
-version: 1.0.0
+info:
+  title: Extracts Social API
+  description: The Extracts Social API.
+  contact:
+    name: API Support
+    url: http://extracts.io/support
+    email: support@extracts.io
+  version: 1.0.0
 servers:
 - url: https://cvqtzfgnk3.execute-api.us-east-1.amazonaws.com/Production
   description: Production server
@@ -16,10 +17,22 @@ components:
       properties:
         message:
           type: string
+    OfferRedemption:
+      type: object
+      properties:
+        id:
+          type: string
+    CreateOfferRedemption:
+      type: object
+      properties:
+        offerCode:
+          type: string
   securitySchemes:
     BearerAuth:
       type: http
       scheme: bearer
+security:
+  - BearerAuth: []
 paths:
   /status:
     get:
@@ -30,6 +43,23 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Status'
+                $ref: '#/components/schemas/Status'
+  /offer-redemptions:
+    post:
+      description: Creates an Offer Redemption
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+                $ref: '#/components/schemas/CreateOfferRedemption'
+      responses:
+        '200':
+          description: Create an Offer Campaign Redemption
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: '#/components/schemas/OfferRedemption'
