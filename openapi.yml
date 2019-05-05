@@ -24,9 +24,34 @@ components:
           type: string
     CreateOfferRedemption:
       type: object
+      required: 
+        - teamId
+        - offerCode
       properties:
+        teamId:
+          type: string
+          example: "39859716-6f25-11e9-ae22-28cfe91fa8f1"
         offerCode:
           type: string
+          example: "SPRING_2019_50_PERCENT_OFF"
+        redeemedAt:
+          type: string
+          format: date-time
+        orderId:
+          type: string
+          example: "O144232334"
+        currency:
+          type: string
+          example: "USD"
+        value:
+          type: string
+          example: "13.33"
+          description: The value of the total order
+        contentIds:
+          type: array
+          items:
+            type: string
+            example: "SKU22242"
   securitySchemes:
     BearerAuth:
       type: http
@@ -36,7 +61,7 @@ security:
 paths:
   /status:
     get:
-      description: Gets the status of the server
+      description: Gets the status of the server. You can use this to test the API.
       responses:
         '200':
           description: A status response
@@ -46,7 +71,7 @@ paths:
                 $ref: '#/components/schemas/Status'
   /offer-redemptions:
     post:
-      description: Creates an Offer Redemption
+      description: Creates an Offer Redemption. "teamId" and "offerCode" are the only required fields.
       requestBody:
         required: true
         content:
