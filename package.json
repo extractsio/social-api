@@ -8,6 +8,6 @@
     "widdershins": "^3.6.7"
   },
   "scripts": {
-    "docs": "widdershins --search false --summary --language_tabs 'shell:Shell' 'python:Python' --summary openapi.yml -o API.md"
+    "docs": "widdershins --search false --summary --language_tabs 'shell:Shell' 'python:Python' --summary social-api.yml -o API.md"
   }
 }
